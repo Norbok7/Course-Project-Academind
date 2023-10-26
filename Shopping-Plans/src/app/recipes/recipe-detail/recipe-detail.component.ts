@@ -25,6 +25,10 @@ ngOnInit(){
     }
   );
 }
+onDeleteRecipe(){
+  this.recipeService.deleteRecipes(this.id);
+  this.router.navigate(['/recipes']);
+}
 
 onAddToShoppingList(){
 this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
